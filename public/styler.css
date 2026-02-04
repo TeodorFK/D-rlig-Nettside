@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family:
+    Comic Sans MS,
+    cursive;
+  font-size: 32px;
+  animation: colorFlash 0.1s linear infinite;
+}
+@keyframes colorFlash {
+  0% {
+    background: #ff00ff;
+  }
+  25% {
+    background: #00ffff;
+  }
+  50% {
+    background: #ffff00;
+  }
+  75% {
+    background: #ff0000;
+  }
+  100% {
+    background: #ff00ff;
+  }
+}
+header {
+  background: repeating-linear-gradient(90deg, purple, orange, green, purple);
+  text-shadow:
+    3px 3px 0 lime,
+    -3px -3px 0 magenta;
+  transform: skewY(-2deg);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  flex-direction: column;
+}
+
+.mat img {
+  width: 20vw;
+  max-width: 55vw;
+  height: 20vw;
+  object-fit: fill;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scaleX(-1);
+  }
+  to {
+    transform: rotate(360deg) scaleX(-1);
+  }
+}
+
+a {
+  color: #ffff00;
+  text-decoration: blink;
+  font-weight: 900;
+  font-size: 24px;
+  text-shadow:
+    2px 2px 4px red,
+    -2px -2px 4px cyan;
+}
+
+/* Modal styles remain unchanged */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal.show {
+  display: flex;
+}
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.modal-content img {
+  display: block;
+  width: 75vw;
+  max-height: 80vh;
+  border-radius: 4px;
+}
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: 0;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}

@@ -1,13 +1,27 @@
 <%- include('./partials/head.ejs') %>
-  <body>
-    <div>
-      <section>
-        <h3>Afrikansk Spaghetti</h3>
-        <img src="/img/brown-spaghetti-recipe-main-photo.jpg" alt="bilde" />
-      </section>
-      <section>
-        <h3>Pappa's Glazed Donut</h3>
-        <img src="/img/Glazed Donut.webp" alt="">
-      </section>
+<body>
+  <div class="container">
+    <section class="mat">
+      <a href=""><h3>Afrikansk Spaghetti</h3></a>
+      <img src="/img/brown-spaghetti-recipe-main-photo.jpg" alt="bilde" />
+    </section>
+    <section class="mat">
+      <a href=""><h3>Pappa's Glazed Donut</h3></a>
+      <img src="/img/Glazed Donut.webp" alt="" />
+    </section>
+  </div>
+  <div
+    id="spriteModal"
+    class="modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-label="Advertisement"
+  >
+    <div class="modal-content" role="document">
+      <button id="closeAd" class="modal-close" aria-label="Close ad">
+        &times;
+      </button>
+      <img src="/img/FREE_ROBUXnew.webp" alt="" />
     </div>
-  </body>
+  </div>
+</body>
