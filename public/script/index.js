@@ -18,5 +18,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
       if (e.key === 'Escape') hideAd();
     });
     setInterval(showAd, 10000); // every 20 seconds
+
+    // prevent Tab navigation
+    function disableTabNavigation() {
+      document.addEventListener(
+        'keydown',
+        function (e) {
+          if (e.key === 'Tab') e.preventDefault();
+        },
+        true,
+      );
+    }
+    disableTabNavigation();
   })();
 });
